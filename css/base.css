@@ -1,0 +1,73 @@
+/* Reset and typography */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  margin: 0;
+  background:
+    radial-gradient(ellipse at 12% 4%, rgba(131, 201, 209, 0.18), transparent 30rem),
+    radial-gradient(ellipse at 92% 38%, rgba(241, 167, 91, 0.1), transparent 32rem),
+    var(--background);
+  background-attachment: fixed;
+  color: var(--text);
+  font-family: 'Manrope', system-ui, sans-serif;
+  font-size: var(--font-base);
+  line-height: 1.6;
+}
+
+:root[data-theme='dark'] body {
+  background-image:
+    radial-gradient(ellipse at 12% 4%, rgba(131, 201, 209, 0.09), transparent 30rem),
+    radial-gradient(ellipse at 92% 38%, rgba(245, 184, 109, 0.05), transparent 32rem);
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--text);
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+p {
+  color: var(--muted);
+}
+
+a {
+  color: var(--primary);
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+::selection {
+  background: rgba(228, 178, 60, 0.35);
+  color: var(--text);
+}

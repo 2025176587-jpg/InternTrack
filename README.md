@@ -1,0 +1,64 @@
+# InternTrack – Internship Application Tracker
+IMS566 Advanced Web Design Development and Content Management – Individual Assignment
+
+**Live site:** https://2025176587-jpg.github.io/2025176587/
+**Repository:** https://github.com/2025176587-jpg/2025176587
+
+## Run locally
+- Open the project folder in Visual Studio Code and select **Run InternTrack in Edge (Ctrl+F5)** in Run and Debug.
+- Press **Ctrl+F5** to open `index.html` in Microsoft Edge without starting a debugger.
+- To use it on another laptop, open the live site above, or copy/clone the complete project folder and repeat these steps.
+
+## Description
+A static web application for tracking internship applications, reviewing progress, and browsing partner companies.
+
+## Features
+- Login and registration with feedback (simulated, no database); usernames must match exactly, including capitalization. Registered accounts are stored in browser local storage.
+- Shared responsive Bootstrap navigation, breadcrumbs, signed-in profile, and footer on authenticated pages.
+- Left-side navigation with a saved mood switch and a clear active-page highlight, print-ready resume profile, and movable quick-help bot with guided FAQ choices.
+- Personalized dashboard summary cards with status deep-links, recent-application filtering, interview follow-ups, progress bars, and interactive Chart.js charts.
+- User-specific application data with add, search, status/company/year filters, sorting, edit, and delete controls. New accounts start with no applications.
+- Optional follow-up dates and notes on applications. Upcoming or overdue follow-ups appear on the dashboard, and filtered records can be exported to CSV.
+- Application company type / industry is saved with each record and shown in the applications list, dashboard, and company directory. Company cards also summarize tracked roles and statuses.
+- Searchable company cards with workplace photos and clickable role details, dynamic filters, and an allowance chart. The dashboard includes a rejected-applications summary card and hover/click application detail previews.
+- English / Bahasa Melayu controls translate the interface, including page labels and charts; the animated Daybreak / Moonlight mood toggle is saved in the browser.
+- Login page internship video with a Pexels credit link, plus a two-second post-login transition that respects reduced-motion settings.
+- Responsive layouts: one column below 600px, two columns from 600px, and three to four columns from 1024px.
+
+## How to test login
+- Username: `NurFatihah`
+- Password: `ims566`
+- Demo profile name: `NurFatihah`
+- Wrong credentials show an error message. You can also create an account on the Register tab (stored in your browser only).
+
+## Design system
+The visual system is defined in `css/variables.css` and layered through base, layout, component, page, and responsive stylesheets. It uses an ocean-teal and warm-amber palette, Manrope typography, Bootstrap 5 components, Bootstrap Icons, a custom SVG favicon, a 4/8/12/16/24/32/48px spacing scale, and a 200ms interaction transition. Responsive breakpoints are 600px, 900px, and 1280px, with a single-column mobile layout and horizontally scrollable application table.
+
+## Structure
+```text
+index.html                 Login and registration
+dashboard.html             Summary, progress, and charts
+applications.html          Searchable and editable application list
+companies.html             Searchable partner-company directory and role details
+profile.html               Resume-style student profile and application history
+favicon.svg                InternTrack browser-tab and brand icon
+css/
+	variables.css            Design tokens
+	base.css                 Reset and typography
+	layout.css               Shared portal shell and page layout
+	components.css           Reusable controls and components
+	pages.css                Page-specific composition
+	responsive.css           Breakpoints and motion preferences
+js/
+	app.js                   Demo data, authentication, and page behavior
+README.md
+```
+
+## Assumptions and limitations
+- Application dates represent submission dates. Optional follow-up dates are entered by the user; no interview or deadline dates are inferred.
+- Application additions, edits, and deletions persist in browser local storage separately for each account. New accounts start empty; the demo account retains its bundled sample applications until changed.
+- Authentication uses hardcoded demo credentials and browser storage; it is not suitable for production accounts or sensitive data. A real deployment needs server-side authentication, password hashing, and protected sessions.
+- External font, Bootstrap, Bootstrap Icons, Chart.js, company photos, and the login video are loaded from CDNs.
+
+## Deploy
+Push to GitHub → Settings → Pages → Deploy from branch `main` / root.

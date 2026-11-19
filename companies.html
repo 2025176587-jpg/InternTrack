@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Explore internship companies, view roles and allowance details, and track your applications.">
+	<meta name="author" content="IMS566 Student">
+	<meta name="theme-color" content="#174b5a">
+	<title>Companies | InternTrack</title>
+	<link rel="icon" type="image/svg+xml" href="favicon.svg">
+	<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+	<link href="css/variables.css" rel="stylesheet">
+	<link href="css/base.css" rel="stylesheet">
+	<link href="css/layout.css" rel="stylesheet">
+	<link href="css/components.css" rel="stylesheet">
+	<link href="css/pages.css" rel="stylesheet">
+	<link href="css/responsive.css" rel="stylesheet">
+</head>
+<body>
+	<header id="nav" class="site-header"></header>
+	<main class="page-shell">
+		<section class="page-heading" aria-labelledby="pageTitle">
+			<h1 id="pageTitle">Companies</h1>
+			<p>Browse partner companies and companies from your tracked applications.</p>
+		</section>
+		<section class="panel company-filter-panel" aria-label="Search and filter companies">
+			<div class="filters-grid">
+				<input id="companySearch" class="form-control" placeholder="Search companies or locations" aria-label="Search companies or locations">
+				<select id="industryFilter" class="form-select" aria-label="Filter by industry"><option value="All">All industries</option></select>
+			</div>
+		</section>
+		<section class="company-grid" id="grid" aria-label="Companies and tracked application details"></section>
+		<section class="panel allowance-panel">
+			<div class="section-heading"><h2>Monthly allowance by company</h2></div>
+			<div class="chart-wrap"><canvas id="allowChart" aria-label="Bar chart of monthly allowance by company"></canvas></div>
+		</section>
+	</main>
+	<div class="modal fade" id="companyDetailModal" tabindex="-1" aria-labelledby="companyDetailTitle" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header"><h2 class="modal-title fs-5" id="companyDetailTitle">Company &amp; role details</h2><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+				<div class="modal-body" id="companyDetailBody"></div>
+				<div class="modal-footer"><button type="button" class="btn btn-mark" data-bs-dismiss="modal">Got it</button></div>
+			</div>
+		</div>
+	</div>
+	<div id="footer"></div>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+	<script src="js/app.js"></script>
+	<script>initCompanies()</script>
+</body>
+</html>

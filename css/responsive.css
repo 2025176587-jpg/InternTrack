@@ -1,0 +1,275 @@
+/* Responsive layouts and motion preferences */
+@media (min-width: 600px) {
+  .stat-grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+
+  .company-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .filters-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .dashboard-panels {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .login-wrap {
+    grid-template-columns: 0.9fr 1.1fr;
+  }
+
+  .login-side {
+    padding: var(--space-7);
+  }
+}
+
+@media (min-width: 900px) {
+  .dashboard-panels[aria-label="Progress and application charts"] {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .profile-resume-content {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .profile-resume-content.resume-main {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .company-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .filters-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1280px) {
+  .stat-grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 899.98px) {
+  .app-sidebar {
+    transform: translateX(-100%);
+  }
+
+  .sidebar-close {
+    position: absolute;
+    top: 24px;
+    right: 16px;
+    display: grid;
+    width: 36px;
+    height: 36px;
+    place-items: center;
+    border: 1px solid rgba(255,255,255,.2);
+    border-radius: var(--radius-sm);
+    background: transparent;
+    color: #fff;
+  }
+
+  body.sidebar-open .app-sidebar {
+    transform: translateX(0);
+  }
+
+  body.sidebar-open::before {
+    position: fixed;
+    z-index: 1085;
+    inset: 0;
+    background: rgba(8, 20, 17, .45);
+    content: '';
+  }
+
+  .site-topbar,
+  .site-header .breadcrumbs-wrap,
+  .site-footer,
+  body.sidebar-collapsed .site-topbar,
+  body.sidebar-collapsed .site-header .breadcrumbs-wrap,
+  body.sidebar-collapsed .site-footer {
+    margin-left: 0;
+  }
+
+  .page-shell,
+  body.sidebar-collapsed .page-shell {
+    width: calc(100% - 32px);
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .dashboard-panels[aria-label="Progress and application charts"] {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .dashboard-panels[aria-label="Progress and application charts"] > :last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    width: 100%;
+  }
+
+  .dashboard-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .dashboard-tools {
+    justify-content: flex-start;
+  }
+
+  .dashboard-date {
+    text-align: left;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .profile-card {
+    grid-template-columns: 72px minmax(0, 1fr);
+  }
+
+  .profile-stats,
+  .profile-card .btn {
+    grid-column: 1 / -1;
+    width: 100%;
+  }
+}
+
+@media (max-width: 599.98px) {
+  .dashboard-filter {
+    width: 100%;
+  }
+
+  .dashboard-panels[aria-label="Progress and application charts"] {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .dashboard-panels[aria-label="Progress and application charts"] > :last-child:nth-child(odd) {
+    grid-column: auto;
+  }
+
+  .page-shell {
+    padding: var(--space-5) var(--space-4) var(--space-6);
+  }
+
+  .site-topbar {
+    min-height: 62px;
+    padding: 8px 12px;
+  }
+
+  .topbar-greeting {
+    max-width: 36vw;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .btn-theme,
+  .btn-logout {
+    min-width: 40px;
+    padding: 7px 10px;
+  }
+
+  .btn-theme span,
+  .btn-logout span {
+    display: none;
+  }
+
+  .profile-resume {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .profile-card {
+    position: static;
+  }
+
+  .profile-initials {
+    width: 64px;
+    height: 64px;
+  }
+
+  .company-hover-card {
+    left: 0;
+    top: calc(100% + 8px);
+    transform: none;
+  }
+
+  .help-widget {
+    right: 14px;
+    bottom: 14px;
+  }
+
+  .page-heading {
+    padding: var(--space-4);
+  }
+
+  .page-heading h1 {
+    font-size: var(--font-xl);
+  }
+
+  .section-heading h2 {
+    font-size: var(--font-lg);
+  }
+
+  .panel {
+    padding: var(--space-4);
+  }
+
+  .login-page {
+    padding: var(--space-3) 0;
+  }
+
+  .login-wrap {
+    width: calc(100% - 24px);
+    min-height: 0;
+  }
+
+  .login-side {
+    padding: var(--space-5);
+  }
+
+  .login-side h1 {
+    font-size: var(--font-2xl);
+  }
+
+  .login-side .lead {
+    margin-bottom: 0;
+    font-size: var(--font-base);
+  }
+
+  .demo-credentials {
+    margin-top: var(--space-3);
+    padding: var(--space-3);
+  }
+
+  .login-form {
+    padding: var(--space-4);
+  }
+
+  .table-responsive {
+    max-width: 100%;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+  }
+
+  .table-responsive table {
+    min-width: 760px;
+  }
+
+  .table-responsive .application-table {
+    min-width: 1060px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
