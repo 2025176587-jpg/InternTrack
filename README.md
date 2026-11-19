@@ -1,8 +1,8 @@
 # InternTrack – Internship Application Tracker
 IMS566 Advanced Web Design Development and Content Management – Individual Assignment
 
-**Live site:** https://2025176587-jpg.github.io/2025176587/
-**Repository:** https://github.com/2025176587-jpg/2025176587
+**Live site:** https://2025176587-jpg.github.io/InternTrack/
+**Repository:** https://github.com/2025176587-jpg/InternTrack
 
 ## Run locally
 - Open the project folder in Visual Studio Code and select **Run InternTrack in Edge (Ctrl+F5)** in Run and Debug.
